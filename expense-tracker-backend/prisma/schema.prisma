@@ -8,21 +8,37 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
-
 model User {
-  id    String @id @default(cuid())
-  name  String
-  email String @unique
-  expenses Expense[]
+  id        String    @id @default(cuid())
+  name      String
+  email     String    @unique
+  expenses  Expense[]
+  memberships Membership[]
+}
+
+model Group {
+  id          String        @id @default(cuid())
+  name        String
+  members     Membership[]
+  expenses    Expense[]
 }
 
 model Expense {
-  id        String   @id @default(cuid())
-  title     String
-  amount    Float
-  paidBy    String
-  createdAt DateTime @default(now())
-  userId    String
-  User      User     @relation(fields: [userId], references: [id])
+  id          String   @id @default(cuid())
+  title       String
+  amount      Float
+  paidBy      String
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+  groupId     String
+  group       Group    @relation(fields: [groupId], references: [id])
+  createdAt   DateTime @default(now())
 }
 
+model Membership {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  group     Group    @relation(fields: [groupId], references: [id])
+  groupId   String
+}
