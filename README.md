@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Collaborative AI-Powered Expense Tracker
 
-## Getting Started
+A smart collaborative expense tracking SaaS that lets users log expenses, generate insights, and settle payments using **natural language** and a **conversational AI UI** powered by **Tambo AI**.
 
-First, run the development server:
+Instead of rigid UI flows, this app lets users *talk to the app* and instantly see interactive UI responses — charts, summaries, expense tables, and payment suggestions — all generated or modified in real time.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 💬 Natural Language Interaction
+- Add/update expenses via conversational commands
+- Ask for summaries like:
+  - “Show expenses by category for May”
+  - “Who owes the most?”
+  - “Suggest settlement plan”
+  
+Powered by Tambo AI’s **Generative UI**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 📋 Persistent & Interactable UI Components
+Users interact with charts, tables, and forms normally — Tambo can also update these components using natural language:
+- Expense list table
+- Group summary panel
+- Settlement suggestion panel
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📊 Smart Reports & Visualizations
+On-demand charts and insights:
+- Expense breakdowns
+- Category analysis
+- Weekly/monthly trends
+…generated dynamically via Tambo.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 👥 Collaborative & Multi-User
+- Group creation
+- Shared expenses
+- Real-time synced balances
+- Settlement suggestions for group members
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔗 Social & Payment Integrations *(Optional)*
+- Payment link generation
+- Email/SMS settlement reminders
+- Export to CSV/PDF
+
+---
+
+## 🧠 Why Tambo AI?
+
+This project combines:
+- **Generative Components** — for AI-generated charts, summaries, and suggestions
+- **Interactable Components** — existing UI elements updated via natural language
+
+This makes the application feel conversational yet fully interactive.
+
+---
+
+## 📦 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React / Next.js |
+| Auth | Firebase Auth / OAuth |
+| Backend | Node.js / Express / Firebase / Supabase |
+| Database | PostgreSQL / Firebase Realtime |
+| AI UI | Tambo AI Generative + Interactable Components |
+| Real-Time Sync | WebSockets / Firebase RTDB |
+
+---
+
+## 🛠 Installation
+
